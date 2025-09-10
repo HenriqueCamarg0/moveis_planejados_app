@@ -1,0 +1,14 @@
+.contato-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.contato-section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.btn-danger {
+  font-size: 1.1rem;
+  border-radius: 8px;
+}

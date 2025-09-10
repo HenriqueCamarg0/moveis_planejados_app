@@ -1,0 +1,27 @@
+.sobre-section {
+  color: #333;
+}
+
+.sobre-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sobre-subtitulo {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.sobre-conteudo p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.sobre-frase-final {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #212529;
+  text-align: center;
+  margin-top: 2rem;
+}
