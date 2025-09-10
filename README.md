@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+## 🛠️ Móveis Planejados — Solicitação de Orçamento
+Este projeto é uma aplicação web desenvolvida com React no frontend e Node.js + Nodemailer no backend, com o objetivo de permitir que clientes solicitem orçamentos personalizados para ambientes planejados. Ao preencher o formulário, o usuário recebe um e-mail de confirmação com os dados enviados.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Tecnologias Utilizadas
+```
+- React com Create React App
+- Bootstrap para estilização responsiva
+- Node.js + Express para o servidor backend
+- Nodemailer para envio de e-mails via Gmail
+- TypeScript no frontend
+- Fetch API para comunicação entre frontend e backend
+```
 
-## Available Scripts
+## 📦 Estrutura do Projeto
+```
+moveis-planejados/
+├── backend/
+│   └── server.js
+├── public/
+├── src/
+│   ├── app/
+│   ├── assets/
+│   ├── components/
+│   │   ├── footer/
+│   │   └── header/
+│   ├── pages/
+│   │   ├── contato/
+│   │   ├── galeria/
+│   │   ├── home/
+│   │   └── sobre/
+├── types/
+```
 
-In the project directory, you can run:
+## 📧 Configuração do envio de e-mail
+```
+Para que o envio funcione corretamente:
+- Ative a verificação em duas etapas na sua conta Gmail
+- Gere uma senha de aplicativo no painel de segurança do Google
+- Insira essa senha no server.js:
+auth: {
+  user: 'seuemail@gmail.com',
+  pass: 'sua_senha_de_aplicativo'
+}
+```
 
-### `npm start`
+✅ Funcionalidades
+- Formulário com campos personalizados
+- Validação de dados
+- Envio automático de e-mail com os dados preenchidos
+- Feedback visual ao usuário após envio
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📌 Deploy
+Você pode hospedar o frontend gratuitamente em:
+- Vercel
+- Netlify
+Para o backend, recomenda-se:
+- Render
+- Railway
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔧 Instalação e Execução
 
-### `npm test`
+1. **Clone o repositório:**
+    ```bash
+    git clone https://github.com/henriquecampaner/app-fuma-diesel.git
+    cd FumacaDieselAPP
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Instale as dependências:**
+    ```bash
+    npm install
+    # ou
+    yarn install
+    ```
 
-### `npm run build`
+3. **Inicie o projeto:**
+    ```bash
+    npx expo start
+    ```
+    Siga as instruções do terminal para rodar no emulador ou dispositivo físico.
+4. **Acesse http://localhost:3000**
+5. **Instale e inicie o backend**
+```cd ../backend
+npm install
+node server.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O backend estará rodando em http://localhost:5000
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🙋‍♂️ Contato
 
-### `npm run eject`
+Desenvolvido por [Henrique Camargo](https://github.com/HenriqueCamarg0).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
