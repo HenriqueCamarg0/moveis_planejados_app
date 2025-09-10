@@ -5,8 +5,7 @@ const Contato: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
     const nome = (document.getElementById('nome') as HTMLInputElement).value;
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const telefone = (document.getElementById('telefone') as HTMLInputElement).value;
