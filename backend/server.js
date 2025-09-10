@@ -3,6 +3,7 @@ require('dotenv').config(); // Carrega variáveis do .env
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+app.use(cors());
 
 const app = express();
 
