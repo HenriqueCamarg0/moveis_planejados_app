@@ -8,7 +8,16 @@
   color: #555;
 }
 
-.btn-danger {
-  font-size: 1.1rem;
-  border-radius: 8px;
+.btn-orcamento {
+  background-color: #8B0000; /* vermelho escuro */
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  transition: background-color 0.10s ease;
+}
+
+.btn-orcamento:hover {
+  color: #0000;
+  background-color: #a30000;
 }

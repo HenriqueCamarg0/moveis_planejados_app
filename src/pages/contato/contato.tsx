@@ -7,13 +7,34 @@ const Contato: React.FC = () => {
 
     const nome = (document.getElementById('nome') as HTMLInputElement).value;
     const email = (document.getElementById('email') as HTMLInputElement).value;
+    const telefone = (document.getElementById('telefone') as HTMLInputElement).value;
+    const cidade = (document.getElementById('cidade') as HTMLInputElement).value;
+    const investimento = (document.getElementById('investimento') as HTMLSelectElement).value;
+
+    const ambientes = ['cozinha', 'sala', 'quarto', 'servico', 'banheiro']
+      .filter(id => (document.getElementById(id) as HTMLInputElement).checked);
+
+    const horario = ['manha', 'almoco', 'tarde', 'noite']
+      .find(id => (document.getElementById(id) as HTMLInputElement).checked);
+
+    const termosAceitos = (document.getElementById('termos') as HTMLInputElement).checked;
 
     try {
       const response = await fetch('http://localhost:5000/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, email })
+        body: JSON.stringify({
+          nome,
+          email,
+          telefone,
+          cidade,
+          investimento,
+          ambientes,
+          horario,
+          termosAceitos
+        })
       });
+
 
       if (response.ok) {
         alert('Formulário enviado com sucesso! Verifique seu e-mail.');
@@ -117,7 +138,7 @@ const Contato: React.FC = () => {
         </div>
 
         <div className="col-md-12 text-center mt-4">
-          <button type="submit" className="btn btn-danger px-5">Solicitar orçamento</button>
+          <button type="submit" className="btn-orcamento">Solicitar orçamento</button>
         </div>
       </form>
     </section>
