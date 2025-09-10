@@ -1,11 +1,16 @@
+require('dotenv').config(); // Carrega variáveis do .env
+
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
+
+// Middlewares
 app.use(cors());
 app.use(express.json());
 
+// Rota de envio de e-mail
 app.post('/send-email', async (req, res) => {
   const {
     nome,
@@ -22,16 +27,18 @@ app.post('/send-email', async (req, res) => {
     return res.status(400).send('Nome e e-mail são obrigatórios');
   }
 
+  // Configuração do transporte SMTP
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'henry2camargo@gmail.com',
-      pass: 'xaxufhsqrevfqrkp' // senha de aplicativo do Gmail
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
     }
   });
 
+  // Conteúdo do e-mail
   const mailOptions = {
-    from: 'henry2camargo@gmail.com',
+    from: process.env.EMAIL_USER,
     to: email,
     subject: 'Confirmação de recebimento da sua solicitação de orçamento',
     html: `
@@ -57,6 +64,7 @@ app.post('/send-email', async (req, res) => {
     `
   };
 
+  // Envio do e-mail
   try {
     await transporter.sendMail(mailOptions);
     console.log(`E-mail enviado para ${email}`);
@@ -67,7 +75,8 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-const PORT = 5000;
+// Inicialização do servidor
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
