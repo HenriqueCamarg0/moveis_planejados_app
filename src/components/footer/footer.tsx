@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               </p>
               <div className="social-links">
                 <a 
-                  href="https://facebook.com/moveisplanejados" 
+                  href="https://facebook.com/#" 
                   className="social-link" 
                   aria-label="Facebook"
                   target="_blank"
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                   <FaFacebookF />
                 </a>
                 <a 
-                  href="https://instagram.com/moveisplanejados" 
+                  href="https://instagram.com/#" 
                   className="social-link" 
                   aria-label="Instagram"
                   target="_blank"
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                   <FaInstagram />
                 </a>
                 <a 
-                  href="https://wa.me/5511999999999" 
+                  href="https://wa.me/5511940436928" 
                   className="social-link" 
                   aria-label="WhatsApp"
                   target="_blank"
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                   <FaWhatsapp />
                 </a>
                 <a 
-                  href="https://linkedin.com/company/moveisplanejados" 
+                  href="https://linkedin.com/company/henrique-camargo-b915621a3" 
                   className="social-link" 
                   aria-label="LinkedIn"
                   target="_blank"
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="contact-item">
                   <FaPhone />
-                  <span>(11) 9999-9999</span>
+                  <span>(11) 94043-6928</span>
                 </div>
                 <div className="contact-item">
                   <FaEnvelope />

@@ -1,12 +1,12 @@
-FROM node:18
+FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+# Copia os arquivos de dentro da pasta hello-fly
+COPY hello-fly/package*.json ./
 RUN npm install
 
-COPY . .
+COPY hello-fly/. .
 
-EXPOSE 5000
-
+EXPOSE 8080
 CMD ["node", "server.js"]
