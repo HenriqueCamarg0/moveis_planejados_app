@@ -1,23 +1,37 @@
-/* Footer modernizado */
+/* ==============================
+   Footer Modernizado Unificado
+================================= */
+
+/* Variáveis de tema */
+:root {
+  --footer-bg-start: #1c1c1c;   /* fundo inicial */
+  --footer-bg-end: #2c2c2c;     /* fundo final */
+  --footer-decor-dot: rgba(255,255,255,0.04);
+
+  --footer-text-main: #ffffff;
+  --footer-text-secondary: #cccccc;
+
+  --footer-highlight-1: #e53935; /* vermelho */
+  --footer-highlight-2: #ff6f61;
+}
+
+/* Container principal */
 .modern-footer {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--footer-bg-start) 0%, var(--footer-bg-end) 100%);
+  color: var(--footer-text-main);
   margin-top: auto;
   position: relative;
   overflow: hidden;
 }
 
-/* Padrão decorativo de fundo */
+/* Padrão decorativo */
 .modern-footer::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 2px, transparent 2px),
-    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 2px, transparent 2px);
+    radial-gradient(circle at 25% 25%, var(--footer-decor-dot) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--footer-decor-dot) 2px, transparent 2px);
   background-size: 50px 50px;
   pointer-events: none;
 }
@@ -28,7 +42,7 @@
   z-index: 1;
 }
 
-/* logo */
+/* Logo */
 .logo {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
@@ -36,12 +50,12 @@
   letter-spacing: 1px;
 }
 
-
+/* Subtítulo */
 .footer-subtitle {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #ecf0f1;
+  color: var(--footer-text-main);
   position: relative;
   padding-bottom: 0.5rem;
 }
@@ -53,13 +67,13 @@
   left: 0;
   width: 30px;
   height: 2px;
-  background: linear-gradient(45deg, #3498db, #2ecc71);
+  background: linear-gradient(45deg, var(--footer-highlight-1), var(--footer-highlight-2));
   border-radius: 1px;
 }
 
 /* Descrição */
 .footer-description {
-  color: #bdc3c7;
+  color: var(--footer-text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -79,18 +93,18 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ecf0f1;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--footer-text-main);
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-link:hover {
-  background: linear-gradient(45deg, #3498db, #2ecc71);
+  background: linear-gradient(45deg, var(--footer-highlight-1), var(--footer-highlight-2));
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 8px 20px rgba(229, 57, 53, 0.3);
 }
 
 /* Links de navegação */
@@ -105,7 +119,7 @@
 }
 
 .footer-links a {
-  color: #bdc3c7;
+  color: var(--footer-text-secondary);
   text-decoration: none;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -121,13 +135,13 @@
   transform: translateY(-50%);
   width: 4px;
   height: 4px;
-  background: #3498db;
+  background: var(--footer-highlight-1);
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #3498db;
+  color: var(--footer-highlight-1);
   padding-left: 1.25rem;
 }
 
@@ -147,13 +161,13 @@
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  color: #bdc3c7;
+  color: var(--footer-text-secondary);
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
 .contact-item i {
-  color: #3498db;
+  color: var(--footer-highlight-1);
   margin-top: 0.1rem;
   font-size: 1rem;
   min-width: 16px;
@@ -168,7 +182,7 @@
 
 .copyright {
   margin: 0;
-  color: #bdc3c7;
+  color: var(--footer-text-secondary);
   font-size: 0.9rem;
 }
 
@@ -178,7 +192,7 @@
 }
 
 .heart {
-  color: #e74c3c;
+  color: var(--footer-highlight-1);
   animation: heartbeat 1.5s ease-in-out infinite;
   font-size: 1rem;
 }
@@ -233,7 +247,7 @@
   }
 }
 
-/* Para garantir que o footer fique sempre embaixo */
+/* Garantir footer fixado embaixo */
 html, body {
   height: 100%;
 }

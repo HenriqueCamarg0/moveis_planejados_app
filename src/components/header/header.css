@@ -1,20 +1,32 @@
-/* Estilos básicos do header */
+/* ==============================
+   Header Modernizado Unificado
+================================= */
+
 .header-container {
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, var(--footer-bg-start) 0%, var(--footer-bg-end) 100%);
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+/* Logo */
 .logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 10px;
 }
 
+.logo img {
+  height: 80px;
+  width: auto;
+  display: block;
+  object-fit: contain;  
+}
 
-/* Estilos da navegação */
+/* Navegação */
 .header-nav {
   display: flex;
   gap: 2rem;
@@ -22,38 +34,64 @@
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: var(--footer-text-main);
   font-weight: 500;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, var(--footer-highlight-1), var(--footer-highlight-2));
+  transition: width 0.3s ease;
+  border-radius: 1px;
 }
 
 .nav-link:hover {
-  color: #007bff;
-  background-color: rgba(0, 123, 255, 0.1);
-  text-decoration: none;
+  color: var(--footer-highlight-1);
+  background-color: rgba(255,255,255,0.05);
+}
+
+.nav-link:hover::before {
+  width: 100%;
 }
 
 .nav-link.active {
-  color: #007bff;
-  background-color: rgba(0, 123, 255, 0.1);
+  color: var(--footer-highlight-1);
   font-weight: 600;
 }
 
-/* Responsividade para telas menores */
+.nav-link.active::before {
+  width: 100%;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
   }
   
   .header-nav {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .nav-link {
-    padding: 0.25rem 0.5rem;
+    padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
+  }
+
+  .logo img {
+    height: 50px;
   }
 }
