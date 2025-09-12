@@ -1,29 +1,13 @@
 import React from 'react';
 import './galeria.css';
 
-// Importando vídeos locais
-import video01 from '../../assets/videos/video-01.mp4';
-import video02 from '../../assets/videos/video-02.mp4';
-import video03 from '../../assets/videos/video-03.mp4';
-import video04 from '../../assets/videos/video-04.mp4';
-import video05 from '../../assets/videos/video-05.mp4';
-import video06 from '../../assets/videos/video-06.mp4';
-import video07 from '../../assets/videos/video-07.mp4';
-import video08 from '../../assets/videos/video-08.mp4';
-import video09 from '../../assets/videos/video-09.mp4';
-import video10 from '../../assets/videos/video-10.mp4';
-
 const videos = [
-  { src: video01, title: 'Tour 360° pela Cozinha Planejada' },
-  { src: video02, title: 'Tour 360° pela Cozinha Planejada' },
-  { src: video03, title: 'Tour 360° pela Cozinha Planejada' },
-  { src: video04, title: 'Tour 360° pela Cozinha Planejada' },
-  { src: video05, title: 'Tour 360° pela Cozinha Planejada' },
-  { src: video06, title: 'Tour 360° pela Cozinha Planejada' },
-  { src: video07, title: 'Tour 360° pela Cozinha Planejada' },
-  { src: video08, title: 'Tour 360° pela Cozinha Planejada' },
-  { src: video09, title: 'Sala de Estar Planejada' },
-  { src: video10, title: 'Sala de Estar Planejada' },
+  { src: 'https://ik.imagekit.io/al1usqugs/assets/videos/video-09.mp4?updatedAt=1757638879257', title: 'Tour 360° pela Cozinha Planejada' },
+  { src: 'https://ik.imagekit.io/al1usqugs/assets/videos/video-07.mp4?updatedAt=1757638868642', title: 'Tour 360° pela Cozinha Planejada' },
+  { src: 'https://ik.imagekit.io/al1usqugs/assets/videos/video-02.mp4?updatedAt=1757638838482', title: 'Tour 360° pela Cozinha Planejada' },
+  { src: 'https://ik.imagekit.io/al1usqugs/assets/videos/video-08.mp4?updatedAt=1757638833729', title: 'Tour 360° pela Cozinha Planejada' },
+  { src: 'https://ik.imagekit.io/al1usqugs/assets/videos/video-05.mp4?updatedAt=1757638809459', title: 'Tour 360° pela Cozinha Planejada' },
+  { src: 'https://ik.imagekit.io/al1usqugs/assets/videos/video-04.mp4?updatedAt=1757638792081', title: 'Tour 360° pela Cozinha Planejada' },
 ];
 
 const GaleriaVideos: React.FC = () => {
