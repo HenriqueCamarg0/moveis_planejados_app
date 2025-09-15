@@ -140,13 +140,12 @@ const Footer: React.FC = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <p className="copyright">
-                © {new Date().getFullYear()} Móveis Planejados. Todos os
-                direitos reservados.
+                © {new Date().getFullYear()} Móveis Planejados.
               </p>
             </div>
             <div className="col-md-6 text-md-end">
               <small className="developer-credit">
-                Desenvolvido com <span className="heart"></span> por Henrique
+                Desenvolvido  <span className="heart"></span> por Henrique
               </small>
             </div>
           </div>
